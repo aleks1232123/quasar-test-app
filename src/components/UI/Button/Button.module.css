@@ -1,0 +1,12 @@
+.headerBtn {
+  background-color: red;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px;
+  font-size: 16px;
+  margin: 4px 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}

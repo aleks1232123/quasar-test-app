@@ -1,0 +1,19 @@
+.header {
+  background-color: #202b53;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.btnContainer {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.headerText {
+  position: absolute;
+  color: white;
+  left: 50%;
+}
