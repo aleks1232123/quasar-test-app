@@ -1,6 +1,6 @@
 .blockContainer {
   word-wrap: break-word;
-  border: 1px solid lightgray;
   min-width: 200px;
   max-width: 800px;
+  position: absolute;
 }

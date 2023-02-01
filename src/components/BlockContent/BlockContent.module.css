@@ -2,4 +2,6 @@
   background-color: #101336;
   color: white;
   min-height: 75px;
+  border-radius: 0 0 7px 7px;
+  user-select: none;
 }
