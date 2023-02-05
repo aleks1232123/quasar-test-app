@@ -4,30 +4,29 @@ import { BlockHeader } from "../BlockHeader/BlockHeader";
 import Draggable from "react-draggable";
 import styles from "./Block.module.css";
 
-export const Block = ({ num, content, state, setCurrentPositions }) => {
+export const Block = ({ num, content, getData, state, blockClose, blockCollapse }) => {
+
   const onDrag = (event, data) => {
-    console.log(state[num]);
-    const newArr = [...state];
-    newArr[num] = {
-      xRate: data.x,
-      yRate: data.y,
-      width: data.node.clientWidth,
-      height: data.node.clientHeight,
-    };
-    setCurrentPositions(newArr);
+    getData(data);
   };
+
+  console.log(state);
+
+  const invisible = {
+    visibility: "hidden",
+  }
 
   return (
     <Draggable
-      position={{
-        x: state[num]?.xRate,
-        y: state[num]?.yRate,
+      defaultPosition={{
+        x: state.xRate,
+        y: state.yRate,
       }}
       onDrag={onDrag}
     >
-      <div className={styles.blockContainer}>
-        <BlockHeader />
-        <BlockContent content={content} />
+      <div style={state.isCollapsed ? invisible : null} className={styles.blockContainer}>
+        <BlockHeader num={num} blockClose={blockClose} blockCollapse={blockCollapse}/>
+        <BlockContent num={num} content={content} />
       </div>
     </Draggable>
   );

@@ -1,4 +1,6 @@
 .content {
+  text-align: center;
+  padding: 10px;
   background-color: #101336;
   color: white;
   min-height: 75px;

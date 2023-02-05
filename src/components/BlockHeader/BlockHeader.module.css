@@ -15,7 +15,8 @@
 
 .headerText {
   user-select: none;
-  position: absolute;
+  /* position: absolute; */
   color: white;
-  left: 50%;
+  text-align: center;
+  /* left: 50%; */
 }
